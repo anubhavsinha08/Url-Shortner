@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>URL SHORTENER</h1>
+    <%if(locals.id){%>
+        <p>URL GENERATED: https://localhost:8001/<%=id%></p>
+
+    <%} %>
+    <form action="/url" method="post">
+        <label for="newUrl"> Enter Your Original Url :</label>
+        <input type="text" id="newUrl" name="url">
+        <button type="submit">Generate</button>
+    </form>
+    <br><br>
+    <hr>
+    <br>
+    <div class="urls">
+    <ul>
+        
+    </ul>
+</div>
+
+    
+</body>
+</html>
