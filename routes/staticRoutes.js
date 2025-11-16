@@ -5,7 +5,7 @@ const URL = require("../models/url");
 router.get("/",async(req,res)=>{
     let allUrls= await URL.find()
     console.log(allUrls);
-    res.render("home");
+    res.render("home",{allUrls});
 })
 
 module.exports = router;

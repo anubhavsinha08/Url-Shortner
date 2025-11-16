@@ -21,7 +21,10 @@
     <br>
     <div class="urls">
     <ul>
-        
+        <% if(allUrls)%>
+           <% allUrls.map((result=>{%>
+                <li><a href="http://localhost:8001/<%=result.shortId%>"><%= result.redirectURl%></a></li>
+            <% }))%>
     </ul>
 </div>
 
